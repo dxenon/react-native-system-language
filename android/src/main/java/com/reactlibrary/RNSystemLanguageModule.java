@@ -37,12 +37,18 @@ public class RNSystemLanguageModule extends ReactContextBaseJavaModule {
         final Map<String, Object> constants = new HashMap<>();
 
         Locale locale = getLocale();
-        Currency currency = Currency.getInstance(locale);
+        Currency currency = null;
 
         constants.put(LANGUAGE_KEY, locale.getLanguage());
         constants.put(LANGUAGE_ISO3_KEY, locale.getISO3Language());
         constants.put(COUNTRY_KEY, locale.getCountry());
         constants.put(COUNTRY_ISO3_KEY, locale.getISO3Country());
+
+        try {
+            currency = Currency.getInstance(locale);
+        } catch (NullPointerException | IllegalArgumentException e) {
+            currency = Currency.getInstance(new Locale("en", "US"));
+        }
 
         constants.put(CURRENCY_SYMBOL, currency != null ? currency.getSymbol() : null);
         constants.put(CURRENCY_CODE, currency != null ? currency.getCurrencyCode() : null);

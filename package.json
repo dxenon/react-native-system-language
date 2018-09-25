@@ -1,17 +1,24 @@
-
 {
   "name": "react-native-system-language",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "React Native library to provide access to system language and currency information",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickgalbraith/react-native-system-language.git"
+  },
+  "author": "Patrick Galbraith",
+  "homepage": "https://github.com/patrickgalbraith/react-native-system-language",
+  "bugs": {
+    "url": "https://github.com/patrickgalbraith/react-native-system-language/issues"
+  },
+  "license": "MIT",
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
   "peerDependencies": {
     "react-native": "^0.41.2"
   }
