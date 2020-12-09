@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   RNSystemLanguage
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/patrickgalbraith/react-native-system-language"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
